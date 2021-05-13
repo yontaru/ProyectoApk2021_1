@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Welcome</string>
+
+    <string name="opcion1">About us</string>
+    <string name="opcion2">English</string>
+    <string name="opcion3">Spanish</string>
+    <string name="nombre">Juan Esteban Correa Fonnegra</string>
+    <string name="perfil">Structure and Processing Analyst for a Market Research company, my job consists of creating
+        the structure through Quest of the paper surveys so that the surveys can be carried out on a computer,
+        tablet and / or cell phone</string>
+    <string name="vermas">See more+</string>
+</resources>

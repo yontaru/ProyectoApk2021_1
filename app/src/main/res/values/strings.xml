@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">ProyectoApk2021_1</string>
+    <string name="app_name">Bienvenido</string>
+
+    <string name="opcion1">Acerca de</string>
+    <string name="opcion2">Inglés</string>
+    <string name="opcion3">Español</string>
+    <string name="nombre">Juan Esteban Correa Fonnegra</string>
+    <string name="perfil">Analista de Estructura y Procesamiento para una empresa de Investigación de Mercados, mi trabajo
+        consiste en crear la estructuraa traves de Quest de las encuestas en papel para que las encuestas puedan ser
+        realizadas en computador, tablet y/o celular</string>
+    <string name="vermas">Ver más</string>
 </resources>

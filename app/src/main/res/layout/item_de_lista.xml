@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="ver mas +"
+            android:text="@string/vermas"
             android:background="@color/aqua"
             android:padding="5dp"
 
