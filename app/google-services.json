@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "287470483330",
+    "project_id": "crudsabado-37151",
+    "storage_bucket": "crudsabado-37151.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287470483330:android:9031557ede2ac7ab5ec19b",
+        "android_client_info": {
+          "package_name": "com.example.proyectoapk2021_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287470483330-hf48a834pe3rtdmeqhlm7mq2rs1uss0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjujFHxzdYEP2hgySlX8v62PCF5i29XFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287470483330-hf48a834pe3rtdmeqhlm7mq2rs1uss0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
