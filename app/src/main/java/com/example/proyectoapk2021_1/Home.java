@@ -103,6 +103,11 @@ public class Home extends AppCompatActivity {
                 Intent intent3=new Intent(Home.this,Home.class);
                 startActivity(intent3);
                 break;
+
+            case(R.id.opcion4):
+                Intent intent1=new Intent(Home.this,Registro.class);
+                startActivity(intent1);
+                break;
         }
 
         return  super.onOptionsItemSelected(opcion);
