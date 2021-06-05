@@ -67,15 +67,7 @@ public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHold
                     .load(datos.getFotoActividad())
                     .into(fotoActividad);
 
-            itemView.setOnClickListener(new View.OnClickListener(){
 
-                @Override
-                public void onClick(View v){
-                    Intent intent = new Intent(itemView.getContext(),MainActivity.class);
-                    intent.putExtra("Actividad",datos);
-                    itemView.getContext().startActivity(intent);
-                }
-            });
         }
     }
 
