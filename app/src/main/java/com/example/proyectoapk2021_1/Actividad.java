@@ -3,8 +3,13 @@ package com.example.proyectoapk2021_1;
 import java.io.Serializable;
 
 public class Actividad implements Serializable {
-    String nombreActividad, descripcionActividad;
-    int fotoActividad;
+    String nombreActividad, descripcionActividad, fotoActividad;
+
+    public Actividad(String nombreActividad, String descripcionActividad, String fotoActividad) {
+        this.nombreActividad = nombreActividad;
+        this.descripcionActividad = descripcionActividad;
+        this.fotoActividad = fotoActividad;
+    }
 
     public String getNombreActividad() {
         return nombreActividad;
@@ -22,17 +27,11 @@ public class Actividad implements Serializable {
         this.descripcionActividad = descripcionActividad;
     }
 
-    public int getFotoActividad() {
+    public String getFotoActividad() {
         return fotoActividad;
     }
 
-    public void setFotoActividad(int fotoActividad) {
-        this.fotoActividad = fotoActividad;
-    }
-
-    public Actividad(String nombreActividad, String descripcionActividad, int fotoActividad) {
-        this.nombreActividad = nombreActividad;
-        this.descripcionActividad = descripcionActividad;
+    public void setFotoActividad(String fotoActividad) {
         this.fotoActividad = fotoActividad;
     }
 }

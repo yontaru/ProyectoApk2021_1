@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         nombreActividad.setText(actividad.getNombreActividad());
         descripcionActividad.setText(actividad.getDescripcionActividad());
-        fotoActividad.setImageResource(actividad.getFotoActividad());
 
     }
 }

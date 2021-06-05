@@ -13,11 +13,12 @@
         android:layout_height="wrap_content"
         android:text="Administrador de ACTIVIDADES"
         android:textSize="22sp"
-        app:layout_constraintVertical_bias="0.1"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118" />
 
     <EditText
         android:id="@+id/nombre"
@@ -44,17 +45,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+
     <EditText
-        android:id="@+id/cargo"
+        android:id="@+id/foto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:hint="Foto"
+        android:inputType="text"
         app:layout_constraintVertical_bias="0.08"
         app:layout_constraintTop_toBottomOf="@id/descripcion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
 
     <Button
         android:id="@+id/botonRegistrar"
@@ -63,7 +67,7 @@
         android:layout_marginHorizontal="20dp"
         android:text="Registrar"
         app:layout_constraintVertical_bias="0.4"
-        app:layout_constraintTop_toBottomOf="@id/cargo"
+        app:layout_constraintTop_toBottomOf="@id/foto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -74,10 +78,11 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:text="Ver actividades"
-        app:layout_constraintVertical_bias="0.08"
-        app:layout_constraintTop_toBottomOf="@id/botonRegistrar"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/botonRegistrar"
+        app:layout_constraintVertical_bias="0.308" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

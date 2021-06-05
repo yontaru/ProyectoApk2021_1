@@ -14,15 +14,15 @@ import static com.example.proyectoapk2021_1.R.raw.inicio;
 public class Splash extends AppCompatActivity {
 
     //Atributos
-    MediaPlayer cancion;
+    //MediaPlayer cancion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        cancion=MediaPlayer.create(this, inicio);
-        cancion.start();
+        //cancion=MediaPlayer.create(this, inicio);
+        //cancion.start();
 
         TimerTask inicio=new TimerTask() {
             @Override

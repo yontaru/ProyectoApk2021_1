@@ -5,10 +5,18 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -18,6 +26,7 @@ public class Home extends AppCompatActivity {
     //ATRIBUTOS
     ArrayList<Actividad> listadedatos= new ArrayList<>();
     RecyclerView listado;
+    FirebaseFirestore baseDatos =FirebaseFirestore.getInstance();
 
     //METODOS
     @Override
@@ -30,31 +39,39 @@ public class Home extends AppCompatActivity {
             listado.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
             crearListado();
-            AdaptadorLista adaptador=new AdaptadorLista(listadedatos);
-            listado.setAdapter(adaptador);
 
         }
     }
 
     private void crearListado(){
 
-        listadedatos.add(new Actividad("Comidas","-Mangarracho (pandequeso agrio), " +
-                "el pandequeso de nata o del capio, los panecitos, (parecidos a los panderitos dulces)\n",R.drawable.pandequeso));
-        listadedatos.add(new Actividad("Sitios Turisticos","Capilla Santa Ana\n" +
-                "Bosques de la Mayoría en la vereda La Honda\n" +
-                "El parque recreativo ecoturistico (el parque arvi)\n" +
-                "Alto de la Virgen\n" +
-                "Laguna de Guarne.\n" +
-                "Cascadas quebrada la Brizuela\n" +
-                "Cascada del Diablo\n" +
-                "El salto\n" +
-                "Alto de la \"M¨\"\n" +
-                "Charcos Vereda San Jose\n" +
-                "Alto del organo vereda Juan XXIII\n" +
-                "El refugio del pescador\n" +
-                "Parque ecológico Piedras Blancas\n" +
-                "Parque Ecológico Siete Cueros\n" +
-                "Lugares arqueológicos en las veredas de La Peña, La Piedra, El Roble y el Rosario",R.drawable.sitios));
+        baseDatos.collection("actividades")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()){
+
+                            for (QueryDocumentSnapshot document : task.getResult()){
+
+                                String nombre=document.get("nombre").toString();
+                                String descripcion=document.get("descripcion").toString();
+                                String foto=document.get("foto").toString();
+
+                                listadedatos.add(new Actividad(nombre,descripcion,foto));
+
+                            }
+
+                            AdaptadorLista adaptador=new AdaptadorLista(listadedatos);
+                            listado.setAdapter(adaptador);
+
+                        }else{
+                            Toast.makeText(getApplicationContext(),"Error: ",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+
     }
 
 
